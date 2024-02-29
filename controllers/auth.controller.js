@@ -8,20 +8,6 @@ const login = async (req, res) => {
         throw new BadRequestError('Please provide username and password');
     }
 
-    const user = await UserModel.create({ ...userData });
-
-    res.cookie('_api_token', token, { httpOnly: true, secure: false });
-
-    return res.status(200).json({ user: { id: user._id, username: user.username } });
-}
-
-const register = async (req, res) => {
-    const { username, password } = userData;
-
-    if (!username || !password) {
-        throw new BadRequestError('Please provide username and password');
-    }
-
     const user = await UserModel.findOne({ username });
 
     if (!user) {
@@ -33,6 +19,22 @@ const register = async (req, res) => {
     if (!correctPassword) {
         throw new UnAuthorizedError('Invalid credentials');
     }
+
+    const token = user.createToken();
+
+    res.cookie('_api_token', token, { httpOnly: true, secure: false });
+
+    return res.status(200).json({ user: { id: user._id, username: user.username } });
+}
+
+const register = async (req, res) => {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+        throw new BadRequestError('Please provide username and password');
+    }
+
+    const user = await UserModel.create({ ...req.body });
 
     const token = user.createToken();
 

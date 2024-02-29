@@ -2,6 +2,7 @@ require('dotenv').config();
 require('express-async-errors');
 const express = require('express');
 const errorMiddleware = require('./middlewares/error.middleware');
+const connectToDb = require('./db/connection');
 
 const authRouter = require('./routes/auth.route');
 
