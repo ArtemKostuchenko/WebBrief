@@ -15,4 +15,14 @@ app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`Server is listening on ${PORT}`));
+const startServer = async() => {
+    try{
+        await connectToDb(process.env.MONGO_URI);
+
+        app.listen(PORT, console.log(`Server is listening on ${PORT}`));
+    }catch(err){
+        console.log(err);
+    }
+}
+
+startServer();
