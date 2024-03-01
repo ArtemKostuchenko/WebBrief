@@ -37,7 +37,7 @@ const Index = () => {
                                 <Input register={register} options={{
                                     required: true,
                                     pattern: /^(\+?38)?(0\d{2}|380\d{2})\d{7}$/
-                                }} name="cellphone" placeholder="Ваша відповідь" />
+                                }} name="cellphone" placeholder="Приклад 380688502075" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="supportInfo" className="form-label">Пошта або месенджер (Telegram, Viber і
@@ -89,7 +89,7 @@ const Index = () => {
                             <div className="mb-3">
                                 <label htmlFor="audience" className="form-label">Які ключові повідомлення ви хочете донести до
                                     цільової аудиторії?</label>
-                                <Input register={register} options={{}} name="audience" placeholder="Ваша відповідь" />
+                                <Input register={register} options={{}} name="keyMessages" placeholder="Ваша відповідь" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="callToAction" className="form-label">Який основний заклик до дії (CTA) ви хочете
@@ -316,7 +316,7 @@ const Index = () => {
                             <div className="mb-3">
                                 <label htmlFor="expectedResutls" className="form-label">Яких результатів ви очікуєте від
                                     веб-сайту?</label>
-                                <Input register={register} options={{}} name="expectedResutls" placeholder="Ваша відповідь" />
+                                <Input register={register} options={{}} name="expectedResults" placeholder="Ваша відповідь" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="successSite" className="form-label">Як ви будете вимірювати успіх веб-сайту?
