@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-light pb-5">
+                <h1 class="p-5">Бриф на розробку веб-сайту</h1>
+                <form>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">1. Контакні дані</h4>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label"><span
+                                    class="text-danger pe-1">*</span>Прізвище</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label"><span
+                                    class="text-danger pe-1">*</span>Ім'я</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cellphone" class="form-label"><span class="text-danger pe-1">*</span>Номер
+                                телефону</label>
+                            <input type="text" class="form-control" id="cellphone" name="cellphone"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="supportInfo" class="form-label">Пошта або месенджер (Telegram, Viber і
+                                т.д) для підтримки зв'язку</label>
+                            <input type="text" class="form-control" id="supportInfo" name="supportInfo"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">2. Короткий опис проєкту</h4>
+                        <div class="mb-3">
+                            <label for="projectDescription" class="form-label"><span
+                                    class="text-danger pe-1">*</span>Опишіть ваш проєкт та його цілі</label>
+                            <input type="text" class="form-control" id="projectDescription" name="projectDescription"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="problems" class="form-label"><span class="text-danger pe-1">*</span>Які проблеми
+                                ви хочете вирішити за допомогою веб-сайту? </label>
+                            <input type="text" class="form-control" id="problems" name="problems"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expectation" class="form-label"><span class="text-danger pe-1">*</span>Які ваші
+                                очікування від веб-сайту?</label>
+                            <input type="text" class="form-control" id="expectation" name="expectation"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">3. Цільова аудиторія</h4>
+                        <div class="mb-3">
+                            <label for="audience" class="form-label">Опишіть свою цільову аудиторію</label>
+                            <input type="text" class="form-control" id="audience" name="audience"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="audienceInterests" class="form-label">Які їхні інтереси та потреби повинні бути
+                                до веб-сайту?</label>
+                            <input type="text" class="form-control" id="audienceInterests" name="audienceInterests"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">4. Ключові повідомлення</h4>
+                        <div class="mb-3">
+                            <label for="audience" class="form-label">Які ключові повідомлення ви хочете донести до
+                                цільової аудиторії?</label>
+                            <input type="text" class="form-control" id="audience" name="audience"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="callToAction" class="form-label">Який основний заклик до дії (CTA) ви хочете
+                                використовувати?</label>
+                            <input type="text" class="form-control" id="callToAction" name="callToAction"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">5. Конкуренти</h4>
+                        <div class="mb-3">
+                            <label for="competitors" class="form-label">Перерахуйте своїх основних конкурентів, яких ви
+                                знаєте</label>
+                            <input type="text" class="form-control" id="competitors" name="competitors"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="likeWebSites" class="form-label">Що вам подобається в їхніх веб-сайтах?</label>
+                            <input type="text" class="form-control" id="dislikeWebSites" name="likeWebSites"
+                                placeholder="Ваша відповідь">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dislikeWebSites" class="form-label">Що вам не подобається в їхніх
+                                веб-сайтах?</label>
+                            <input type="text" class="form-control" id="dislikeWebSites" name="dislikeWebSites"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">6. Дизайн та функціональність</h4>
+                        <div class="mb-3">
+                            <label for="designStyle" class="form-label">Який стиль дизайну ви хочете використовувати?
+                            </label>
+                            <input type="text" class="form-control" id="designStyle" name="designStyle"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="featuresWebSite" class="form-label">Чи є у вас фірмовий логотип чи
+                                стиль?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="brand" id="brand-1" value="Так">
+                                <label class="form-check-label" for="brand-1">
+                                    Так
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="brand" id="brand-0" value="Ні">
+                                <label class="form-check-label" for="brand-0">
+                                    Ні
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="brand" id="brand-other" value="Інше">
+                                <label class="form-check-label" for="brand-other">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="brandInfo" name="brandInfo"
+                                    placeholder="Ваша відповідь">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="featuresWebSite" class="form-label">Який стиль ви бажаєте для зовнішьного
+                                вигляду вашого майбутнього веб-сайту?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="style" id="style-1"
+                                    value="Мінімалістичний">
+                                <label class="form-check-label" for="brand-1">
+                                    Мінімалістичний
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="style" id="style-2"
+                                    value="Корпоративний">
+                                <label class="form-check-label" for="brand-0">
+                                    Корпоративний
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="style" id="style-3"
+                                    value="Креативний">
+                                <label class="form-check-label" for="brand-0">
+                                    Креативний
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="brand" id="style-other" value="Інше">
+                                <label class="form-check-label" for="style-other">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="stylePage" name="stylePage"
+                                    placeholder="Ваша відповідь">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="likeSites" class="form-label">Наведіть приклади веб-сайтів, які вам
+                                подобаються</label>
+                            <input type="text" class="form-control" id="likeSites" name="likeSites"
+                                placeholder="Ваша відповідь">
+                        </div>
+                        <div class="mb-3">
+                            <label for="featuresWebSite" class="form-label">Які функції вам потрібні на
+                                веб-сайті?</label>
+                            <input type="text" class="form-control" id="featuresWebSite" name="featuresWebSite"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">7. Структура сайту</h4>
+                        <div class="mb-3">
+                            <label class="form-label">Яку структуру ви хочете мати на вашому
+                                майбутньому веб-сайті? </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Головна" id="structure-0">
+                                <label class="form-check-label" for="structure-0">
+                                    Головна
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Про компанію" id="structure-1">
+                                <label class="form-check-label" for="structure-1">
+                                    Про компанію
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Продукти" id="structure-2">
+                                <label class="form-check-label" for="structure-2">
+                                    Продукти
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Послуги" id="structure-3">
+                                <label class="form-check-label" for="structure-3">
+                                    Послуги
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Блог" id="structure-4">
+                                <label class="form-check-label" for="structure-4">
+                                    Блог
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Інше" id="structure-5">
+                                <label class="form-check-label" for="structure-5">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="structureInfo" name="structureInfo"
+                                    placeholder="Ваша відповідь" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="chaptersSite" class="form-label">Які основні розділи будуть на вашому
+                                веб-сайті?</label>
+                            <input type="text" class="form-control" id="chaptersSite" name="chaptersSite"
+                                placeholder="Ваша відповідь">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contentPages" class="form-label">Який контент буде на кожній сторінці?</label>
+                            <input type="text" class="form-control" id="contentPages" name="contentPages"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">8. Технічні вимоги</h4>
+                        <div class="mb-3">
+                            <label for="designStyle" class="form-label">Вам потрібна мобільна версія сайту? </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="adaptive" id="adaptive-1"
+                                    value="Так">
+                                <label class="form-check-label" for="brand-1">
+                                    Так
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="adaptive" id="adaptive-0" value="Ні">
+                                <label class="form-check-label" for="brand-0">
+                                    Ні
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="adaptive" id="adaptive-other"
+                                    value="Інше">
+                                <label class="form-check-label" for="adaptive-other">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="adaptiveInfo" name="adaptiveInfo"
+                                    placeholder="Ваша відповідь">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="designStyle" class="form-label">Вам потрібна система онлайн-платежів?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentSystem" id="paymentSystem-1"
+                                    value="Так">
+                                <label class="form-check-label" for="brand-1">
+                                    Так
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentSystem" id="paymentSystem-0"
+                                    value="Ні">
+                                <label class="form-check-label" for="brand-0">
+                                    Ні
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentSystem"
+                                    id="paymentSystem-other" value="Інше">
+                                <label class="form-check-label" for="paymentSystem-other">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="paymentSystemInfo" name="paymentSystemInfo"
+                                    placeholder="Ваша відповідь">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="featuresWebSite" class="form-label">Які інші технічні вимоги ви маєте?</label>
+                            <input type="text" class="form-control" id="featuresWebSite" name="featuresWebSite"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">9. Терміни та бюджет</h4>
+                        <div class="mb-3">
+                            <label for="deadline" class="form-label"><span class="text-danger pe-1">*</span>Вкажіть
+                                бажані терміни здачі розробленого веб-сайту</label>
+                            <input type="text" class="form-control" id="deadline" name="deadline"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="budget" class="form-label"><span class="text-danger pe-1">*</span>Який ваш
+                                бюджет на розробку веб-сайту? ($)</label>
+                            <input type="text" class="form-control" id="budget" name="budget"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">10. Очікувані результати</h4>
+                        <div class="mb-3">
+                            <label for="expectedResutls" class="form-label">Яких результатів ви очікуєте від
+                                веб-сайту?</label>
+                            <input type="text" class="form-control" id="expectedResutls" name="expectedResutls"
+                                placeholder="Ваша відповідь">
+                        </div>
+                        <div class="mb-3">
+                            <label for="successSite" class="form-label">Як ви будете вимірювати успіх веб-сайту?
+                                (cкільки людей відвідують ваш сайт щодня, щомісяця, щороку, скільки часу вони проводять
+                                на сайті і т.д)</label>
+                            <input type="text" class="form-control" id="successSite" name="successSite"
+                                placeholder="Ваша відповідь" required>
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">11. Додаткові питання</h4>
+                        <div class="mb-3">
+                            <label for="designStyle" class="form-label"><span class="text-danger pe-1">*</span>Чи є у
+                                вас особа, яка буде відповідальна за управління веб-сайтом, зокрема, його вмістом і
+                                т.д.?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="managerSite" id="managerSite-1"
+                                    value="Так">
+                                <label class="form-check-label" for="managerSite-1">
+                                    Так
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="managerSite" id="managerSite-0"
+                                    value="Ні">
+                                <label class="form-check-label" for="managerSite-0">
+                                    Ні
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="managerSite" id="managerSite-other"
+                                    value="Інше">
+                                <label class="form-check-label" for="managerSite-other">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="managerSiteInfo" name="managerSiteInfo"
+                                    placeholder="Ваша відповідь">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="designStyle" class="form-label"><span class="text-danger pe-1">*</span>Чи
+                                потрібно нам забезпечити наповнення веб-сайту контентом після розробки?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contentUs" id="contentUs-1"
+                                    value="Так">
+                                <label class="form-check-label" for="contentUs-1">
+                                    Так
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contentUs" id="contentUs-0"
+                                    value="Ні">
+                                <label class="form-check-label" for="contentUs-0">
+                                    Ні
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contentUs" id="contentUs-other"
+                                    value="Інше">
+                                <label class="form-check-label" for="contentUs-other">
+                                    Інше
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="contentUsInfo" name="contentUsInfo"
+                                    placeholder="Ваша відповідь">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-2 rounded p-5 mb-5">
+                        <h4 class="h4 mb-3">12. Додаткова інформація</h4>
+                        <div class="mb-3">
+                            <label for="additionalInfo" class="form-label">Надайте будь-яку додаткову інформацію
+                                (побажання), яка може бути корисною для нас</label>
+                            <input type="text" class="form-control" id="additionalInfo" name="additionalInfo"
+                                placeholder="Ваша відповідь">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-info">Надіслати</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
