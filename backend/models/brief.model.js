@@ -17,6 +17,10 @@ const WebBriefSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    projectName: {
+        type: String,
+        required: true,
+    },
     projectDescription: {
         type: String,
         required: true,
@@ -125,6 +129,6 @@ const WebBriefSchema = mongoose.Schema({
     additionalInfo: {
         type: String,
     },
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('web brief', WebBriefSchema);

@@ -1,11 +1,22 @@
 import { useForm } from 'react-hook-form';
 import Input from '../components/Input';
+import { createBrief } from '../utils/functions';
+import { AppContext } from '../contexts/app';
+import { useContext } from 'react';
 
 const Index = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit} = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data, errors);
+    const { showAlertMessage } = useContext(AppContext);
+
+    const onSubmit = async (data) => {
+        const result = await createBrief(data);
+
+        if(result){
+            showAlertMessage('Бриф успішно збережено');
+        }else{
+            showAlertMessage('Помилка збереження брифу', 'error');
+        }
     }
 
     return (
@@ -50,6 +61,13 @@ const Index = () => {
                         </div>
                         <div className="border border-2 rounded p-5 mb-5">
                             <h4 className="h4 mb-3">2. Короткий опис проєкту</h4>
+                            <div className="mb-3">
+                                <label htmlFor="projectDescription" className="form-label"><span
+                                    className="text-danger pe-1">*</span>Назва проекту</label>
+                                <Input register={register} options={{
+                                    required: true,
+                                }} name="projectName" placeholder="Ваша відповідь" />
+                            </div>
                             <div className="mb-3">
                                 <label htmlFor="projectDescription" className="form-label"><span
                                     className="text-danger pe-1">*</span>Опишіть ваш проєкт та його цілі</label>
@@ -189,7 +207,7 @@ const Index = () => {
                             </div>
                         </div>
                         <div className="border border-2 rounded p-5 mb-5">
-                            <h4 className="h4 mb-3">7. Структура сайту</h4>
+                            <h4 className="h4 mb-3">7. Структура веб-сайту</h4>
                             <div className="mb-3">
                                 <label className="form-label">Яку структуру ви хочете мати на вашому
                                     майбутньому веб-сайті? </label>
@@ -246,7 +264,7 @@ const Index = () => {
                         <div className="border border-2 rounded p-5 mb-5">
                             <h4 className="h4 mb-3">8. Технічні вимоги</h4>
                             <div className="mb-3">
-                                <label htmlFor="designStyle" className="form-label">Вам потрібна мобільна версія сайту? </label>
+                                <label htmlFor="designStyle" className="form-label">Вам потрібна мобільна версія веб-сайту? </label>
                                 <div className="form-check">
                                     <Input className="form-check-input" type="radio" register={register} options={{}} name="adaptive" id="adaptive-1" value="Так" placeholder="Ваша відповідь" />
                                     <label className="form-check-label" htmlFor="adaptive-1">

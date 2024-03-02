@@ -22,9 +22,9 @@ const login = async (req, res) => {
 
     const token = user.createToken();
 
-    res.cookie('_api_token', token, { httpOnly: true, secure: false });
+    res.cookie('api_token', token, { httpOnly: true, secure: false });
 
-    return res.status(200).json({ user: { id: user._id, username: user.username } });
+    return res.status(200).json({ user: { id: user._id, username: user.username, isAdmin: user.isAdmin } });
 }
 
 const register = async (req, res) => {
@@ -38,9 +38,23 @@ const register = async (req, res) => {
 
     const token = user.createToken();
 
-    res.cookie('_api_token', token, { httpOnly: true, secure: false });
+    res.cookie('api_token', token, { httpOnly: true, secure: false });
 
-    return res.status(200).json({ user: { id: user._id, username: user.username } });
+    return res.status(200).json({ user: { id: user._id, username: user.username, isAdmin: user.isAdmin } });
 }
 
-module.exports = { login, register };
+const validate = async (req, res) => {
+    const user = await UserModel.findById(req.user._id);
+
+    if (!user) {
+        if (req.cookies.api_token) {
+            res.clearCookie('api_token');
+        }
+
+        throw new UnAuthorizedError('Invalid credentials');
+    }
+
+    return res.status(200).json({ user: { id: user._id, username: user.username, isAdmin: user.isAdmin } });
+}
+
+module.exports = { login, register, validate };
