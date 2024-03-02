@@ -1,8 +1,12 @@
-import axios from 'axios'
+import axiosInstance from 'axios';
+
+const axios = axiosInstance.create({
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api/v1/'
+});
 
 export const createBrief = async (data) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/v1/brief', data, {
+        const response = await axios.post('brief', data, {
             withCredentials: true,
         });
 
@@ -18,7 +22,7 @@ export const createBrief = async (data) => {
 
 export const getBrief = async (briefId) => {
     try {
-        const response = await axios.get(`http://localhost:5000/api/v1/brief/${briefId}`, {
+        const response = await axios.get(`brief/${briefId}`, {
             withCredentials: true,
         });
 
@@ -34,7 +38,7 @@ export const getBrief = async (briefId) => {
 
 export const updateBrief = async (briefId, data) => {
     try {
-        const response = await axios.patch(`http://localhost:5000/api/v1/brief/${briefId}`, data, {
+        const response = await axios.patch(`brief/${briefId}`, data, {
             withCredentials: true,
         });
 
@@ -50,7 +54,7 @@ export const updateBrief = async (briefId, data) => {
 
 export const getBriefs = async (sort, input, searchBy) => {
     try {
-        const response = await axios.get(`http://localhost:5000/api/v1/brief?sort=${sort}&${searchBy}=${input}`, {
+        const response = await axios.get(`brief?sort=${sort}&${searchBy}=${input}`, {
             withCredentials: true,
         });
 
@@ -66,7 +70,7 @@ export const getBriefs = async (sort, input, searchBy) => {
 
 export const deleteBrief = async (briefId) => {
     try {
-        const response = await axios.delete(`http://localhost:5000/api/v1/brief/${briefId}`, {
+        const response = await axios.delete(`brief/${briefId}`, {
             withCredentials: true,
         });
 
@@ -82,7 +86,7 @@ export const deleteBrief = async (briefId) => {
 
 export const authUser = async (data) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/v1/auth/login', data, {
+        const response = await axios.post('auth/login', data, {
             withCredentials: true,
         });
 
@@ -98,7 +102,7 @@ export const authUser = async (data) => {
 
 export const validAuth = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/api/v1/auth/validate', {
+        const response = await axios.get('auth/validate', {
             withCredentials: true,
         });
 

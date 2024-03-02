@@ -28,7 +28,7 @@ app.use(cookieSession({
 }));
 
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    origin: process.env.CLIENT_URI || 'http://localhost:3000',
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS']
 }));
@@ -43,12 +43,13 @@ app.use('/api/v1/brief', briefRouter);
 app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || 'localhost';
 
 const startServer = async () => {
     try {
         await connectToDb(process.env.MONGO_URI);
 
-        app.listen(PORT, console.log(`Server is listening on ${PORT}`));
+        app.listen(PORT, HOST, console.log(`Server is listening on ${PORT}`));
     } catch (err) {
         console.log(err);
     }
