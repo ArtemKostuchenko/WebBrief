@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import Input from '../components/Input';
 import { AppContext } from '../contexts/app';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { authUser } from '../utils/functions';
 import { useAuth } from '../hooks/auth';
 import { useNavigate } from 'react-router-dom'
@@ -26,7 +26,6 @@ const Login = () => {
                 username: user.username,
                 isAdmin: user.isAdmin,
             }));
-            navigate('/panel');
             showAlertMessage('Ви успішно ввійшли');
         } else {
             dispatch(clearUser());
@@ -35,7 +34,7 @@ const Login = () => {
     }
 
     if (isAuth) {
-        navigate('/');
+        navigate('/panel');
     }
 
     return (

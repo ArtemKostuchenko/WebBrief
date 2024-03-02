@@ -13,7 +13,7 @@ const Index = () => {
         if (loading && !isAuth) {
             navigate('/');
         }
-    }, loading);
+    }, [loading, isAuth, navigate]);
 
 
     return <div className="d-flex">

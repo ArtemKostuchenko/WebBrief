@@ -1,11 +1,22 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom"
 import { getBrief } from "../../../utils/functions";
+import { useAuth } from "../../../hooks/auth";
+import { AppContext } from "../../../contexts/app";
 
 
 const Brief = () => {
     const { id } = useParams();
     const [brief, setBrief] = useState(null);
+    const { isAuth, username } = useAuth();
+    const { loading } = useContext(AppContext);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (loading && !isAuth) {
+            navigate('/');
+        }
+    }, [loading, isAuth, navigate]);
 
     const getData = async () => {
         const data = await getBrief(id);
