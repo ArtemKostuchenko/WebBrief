@@ -32,6 +32,22 @@ export const getBrief = async (briefId) => {
     }
 }
 
+export const updateBrief = async (briefId, data) => {
+    try {
+        const response = await axios.patch(`http://localhost:5000/api/v1/brief/${briefId}`, data, {
+            withCredentials: true,
+        });
+
+        if (response.status === 200) {
+            return response.data.success;
+        }
+
+        return false;
+    } catch (err) {
+        return false;
+    }
+}
+
 export const getBriefs = async (sort, input, searchBy) => {
     try {
         const response = await axios.get(`http://localhost:5000/api/v1/brief?sort=${sort}&${searchBy}=${input}`, {
