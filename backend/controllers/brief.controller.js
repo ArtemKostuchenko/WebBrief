@@ -189,7 +189,9 @@ const getPDF = async (req, res) => {
     }
 
     const formattedDate = new Date(brief.createdAt).toISOString().split('T')[0];
-    const name = `Бриф_${brief.lastName}_${brief.firstName}_${brief.projectName}_${formattedDate}.pdf`;
+
+    const projectName = brief.projectName.replace(/["'\\]/g, '_').replace('-', '_').replace(' ', '_');
+    const name = `Бриф_${brief.lastName}_${brief.firstName}_${projectName}_${formattedDate}.pdf`;
 
 
     let configLaunch = {
@@ -256,15 +258,15 @@ const getPDF = async (req, res) => {
     await page.pdf({
         headerTemplate: 'title',
         format: 'A4',
-        path: `tmp/${name}`,
+        path: `tmp/'${name}'`,
         preferCSSPageSize: true,
         printBackground: true,
     });
 
     await browser.close();
-    const pdfFile = fs.readFileSync(`tmp/${name}`);
+    const pdfFile = fs.readFileSync(`tmp/'${name}'`);
 
-    fs.unlinkSync(`tmp/${name}`);
+    fs.unlinkSync(`tmp/'${name}'`);
 
     const fileName = encodeURIComponent(name);
     res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
