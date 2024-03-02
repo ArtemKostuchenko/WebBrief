@@ -188,7 +188,7 @@ const getPDF = async (req, res) => {
         throw new NotFoundError("Brief not found");
     }
 
-    const formattedDate = new Date().toISOString().split('T')[0];
+    const formattedDate = new Date(brief.createdAt).toISOString().split('T')[0];
     const name = `Бриф_${brief.lastName}_${brief.firstName}_${brief.projectName}_${formattedDate}.pdf`;
 
 

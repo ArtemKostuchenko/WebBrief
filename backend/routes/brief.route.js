@@ -8,6 +8,6 @@ const router = express.Router();
 router.route('/').post(createBrief).get(authMiddleware, getBriefs);
 
 router.route('/:id').get(authMiddleware, getBrief).patch(authMiddleware, updateBrief).delete(authMiddleware, deleteBrief);
-router.route('/:id/pdf').get(getPDF);
+router.route('/:id/pdf').get(authMiddleware, getPDF);
 
 module.exports = router;
