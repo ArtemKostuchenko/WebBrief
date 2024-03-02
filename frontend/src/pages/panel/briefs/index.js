@@ -102,7 +102,7 @@ const Index = () => {
                                         <div className="w-100 d-flex justify-content-center  align-items-center">{brief.lastName}</div>
                                         <div className="w-100 d-flex justify-content-center align-items-center">{brief.firstName}</div>
                                         <div className="w-100 d-flex justify-content-center align-items-center">{formatDate(brief.createdAt)}</div>
-                                        <div className="w-100 d-flex justify-content-center align-items-center"><button type="button" className="btn btn-warning">PDF</button></div>
+                                        <div className="w-100 d-flex justify-content-center align-items-center"><a href={`http://localhost:5000/api/v1/brief/${brief._id}/pdf`} className="btn btn-warning" >PDF</a></div>
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-2">
                                             <Link to={`/panel/briefs/${brief._id}/edit`} className="btn btn-primary">
                                                 Редагувати

@@ -5,7 +5,7 @@ import { AppContext } from '../contexts/app';
 import { useContext } from 'react';
 
 const Index = () => {
-    const { register, handleSubmit} = useForm();
+    const { register, handleSubmit, reset} = useForm();
 
     const { showAlertMessage } = useContext(AppContext);
 
@@ -13,6 +13,7 @@ const Index = () => {
         const result = await createBrief(data);
 
         if(result){
+            reset();
             showAlertMessage('Бриф успішно збережено');
         }else{
             showAlertMessage('Помилка збереження брифу', 'error');
