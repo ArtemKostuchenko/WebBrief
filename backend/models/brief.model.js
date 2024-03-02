@@ -72,9 +72,6 @@ const WebBriefSchema = mongoose.Schema({
     likeSites: {
         type: String,
     },
-    featuresWebSite: {
-        type: String,
-    },
     structure: {
         type: Array,
     },

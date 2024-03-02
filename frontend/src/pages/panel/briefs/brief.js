@@ -245,7 +245,7 @@ const Brief = () => {
                                     <div className="mb-3">
                                         <label htmlFor="designStyle" className="form-label"><span className="text-danger pe-1">*</span>Чи
                                             потрібно нам забезпечити наповнення веб-сайту контентом після розробки?</label>
-                                        <p className="text-warning">{brief.managerSite}</p>
+                                        <p className="text-warning">{brief.contentUs}</p>
                                         {brief.contentUsInfo &&
                                             <p className="text-warning">{brief.contentUsInfo}</p>
                                         }
